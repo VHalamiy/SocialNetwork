@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <FBSDKCoreKit/FBSDKProfilePictureView.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController 
 
+@property (weak, nonatomic) IBOutlet FBSDKLoginButton *customLoginButton;
+@property (weak, nonatomic) IBOutlet FBSDKProfilePictureView *profilePicture;
+
+- (IBAction)loginButtonClicked:(id)sender;
 
 @end
 

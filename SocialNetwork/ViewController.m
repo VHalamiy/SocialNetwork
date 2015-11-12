@@ -7,8 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <FBSDKLoginKit/FBSDKLoginKit.h>
+
 
 @interface ViewController ()
 
@@ -17,16 +16,35 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
-    loginButton.center = self.view.center;
-    [self.view addSubview:loginButton];
+//    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+//    loginButton.center = self.view.center;
+//    [self.view addSubview:loginButton];
+    [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)loginButtonClicked:(id)sender {
+    
+    FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+    [login logInWithReadPermissions: @[@"public_profile"]
+                 fromViewController:self
+                            handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+         if (error) {
+             NSLog(@"Process error");
+         } else if (result.isCancelled) {
+             NSLog(@"Cancelled");
+         } else {
+             NSLog(@"Logged in");
+            // self.profilePicture.profileID = @"4";
+         }
+     }];
 }
 
 @end
