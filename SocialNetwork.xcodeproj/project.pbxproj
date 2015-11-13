@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13BCB90D1BF5E9DD00B06771 /* FriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BCB90C1BF5E9DD00B06771 /* FriendsTableViewController.m */; };
+		13BCB9101BF5EF9B00B06771 /* VHRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BCB90F1BF5EF9B00B06771 /* VHRequestOperationManager.m */; };
 		13E54EB91BE236EC003BC314 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E54EB81BE236EC003BC314 /* main.m */; };
 		13E54EBC1BE236EC003BC314 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E54EBB1BE236EC003BC314 /* AppDelegate.m */; };
 		13E54EBF1BE236EC003BC314 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E54EBE1BE236EC003BC314 /* ViewController.m */; };
@@ -28,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13BCB90B1BF5E9DD00B06771 /* FriendsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsTableViewController.h; sourceTree = "<group>"; };
+		13BCB90C1BF5E9DD00B06771 /* FriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsTableViewController.m; sourceTree = "<group>"; };
+		13BCB90E1BF5EF9B00B06771 /* VHRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VHRequestOperationManager.h; sourceTree = "<group>"; };
+		13BCB90F1BF5EF9B00B06771 /* VHRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VHRequestOperationManager.m; sourceTree = "<group>"; };
 		13E54EB31BE236EC003BC314 /* SocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E54EB71BE236EC003BC314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13E54EB81BE236EC003BC314 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,8 +96,12 @@
 			children = (
 				13E54EBA1BE236EC003BC314 /* AppDelegate.h */,
 				13E54EBB1BE236EC003BC314 /* AppDelegate.m */,
+				13BCB90E1BF5EF9B00B06771 /* VHRequestOperationManager.h */,
+				13BCB90F1BF5EF9B00B06771 /* VHRequestOperationManager.m */,
 				13E54EBD1BE236EC003BC314 /* ViewController.h */,
 				13E54EBE1BE236EC003BC314 /* ViewController.m */,
+				13BCB90B1BF5E9DD00B06771 /* FriendsTableViewController.h */,
+				13BCB90C1BF5E9DD00B06771 /* FriendsTableViewController.m */,
 				13E54EC01BE236EC003BC314 /* Main.storyboard */,
 				13E54EC31BE236EC003BC314 /* Images.xcassets */,
 				13E54EC51BE236EC003BC314 /* LaunchScreen.xib */,
@@ -295,7 +305,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13E54EBF1BE236EC003BC314 /* ViewController.m in Sources */,
+				13BCB90D1BF5E9DD00B06771 /* FriendsTableViewController.m in Sources */,
 				13E54EBC1BE236EC003BC314 /* AppDelegate.m in Sources */,
+				13BCB9101BF5EF9B00B06771 /* VHRequestOperationManager.m in Sources */,
 				13E54EB91BE236EC003BC314 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
