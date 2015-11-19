@@ -21,7 +21,8 @@
     [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];
     if ([FBSDKAccessToken currentAccessToken]) {
         [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:nil]
-         startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+         startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result,
+                                      NSError *error) {
              if (!error) {
                  NSLog(@"fetched user:%@", result);
              }
@@ -32,6 +33,7 @@
 }
 
 - (void)didReceiveMemoryWarning {
+    
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
