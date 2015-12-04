@@ -7,6 +7,8 @@
 //
 
 #import "FriendsTableViewController.h"
+#import <FBSDKCoreKit/FBSDKGraphRequest.h>
+#import "VHRequestOperationManager.h"
 
 @interface FriendsTableViewController ()
 
@@ -20,6 +22,8 @@
     
     [super viewDidLoad];
     
+    self.friendsList = [NSMutableArray array];
+    [self getFriendsFromServer];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -33,12 +37,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+- (void)getFriendsFromServer {
+    
+    [[VHRequestOperationManager sharedManager]
+     getFriendsWithOffset:[self.friendsList count]
+     count:20
+     onSuccess:^(NSArray *friends) {
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//
-//    return 0;
-//}
+     }
+     onFailure:^(NSError *error) {
+         NSLog(@"%@", [error localizedDescription]);
+     }];
+}
+
+#pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 

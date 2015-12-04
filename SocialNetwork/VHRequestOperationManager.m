@@ -20,5 +20,13 @@
     return instanceManager;
 }
 
+- (void)getFriendsWithOffset:(NSUInteger)offset
+                       count:(NSUInteger)count
+                   onSuccess:(void (^)(NSArray *))success
+                   onFailure:(void (^)(NSError *))failure {
+    
+    
+}
+
 
 @end

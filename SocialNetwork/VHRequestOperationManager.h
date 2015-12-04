@@ -11,5 +11,9 @@
 @interface VHRequestOperationManager : NSObject
 
 + (VHRequestOperationManager *)sharedManager;
-
+- (void) getFriendsWithOffset:(NSUInteger) offset
+                        count:(NSUInteger) count
+                    onSuccess:(void (^)(NSArray *friends)) success
+                    onFailure:(void (^)(NSError *error)) failure;
+    
 @end
